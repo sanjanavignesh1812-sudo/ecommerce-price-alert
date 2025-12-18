@@ -27,3 +27,23 @@ This project detects product price drops and sends email alerts automatically.
 ## ✉️ Email Alert
 Alert is triggered only when price drops
 
+## Issues Faced & Fixes
+
+### 1. Multiple rows added unintentionally
+Cause: Append row placed before IF node.
+Fix: Append only after filtering logic.
+
+### 2. Price treated as string
+Cause: Google Sheets stores values as text.
+Fix: Converted price to Number in JS.
+
+### 3. Multiple items passing IF condition
+Cause: IF checked absolute price (<10) instead of price drop.
+Fix: Compared previous_price vs current_price.
+
+### 4. Wrong previous_price selected
+Cause: Rows not sorted by fetched_at.
+Fix: Sorted rows in descending order before comparison.
+
+### 5. False branch confusion
+Fix: Left false branch empty intentionally.
