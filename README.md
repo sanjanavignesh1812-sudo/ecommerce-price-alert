@@ -25,5 +25,5 @@ This project detects product price drops and sends email alerts automatically.
 |----|-------|----------|-------|--------|-------|------------|
 
 ## ✉️ Email Alert
-Alert is triggered only when:
+Alert is triggered only when price drops
 
