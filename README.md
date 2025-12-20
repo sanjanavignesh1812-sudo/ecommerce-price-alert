@@ -50,14 +50,6 @@ Only the **same product’s** latest and previous prices are compared.
 ## 🧮 SQL Equivalent Logic
 The same price-drop logic can be implemented in SQL using window functions.
 
-
-Only the **same product’s** latest and previous prices are compared.
-
----
-
-## 🧮 SQL Equivalent Logic
-The same price-drop logic can be implemented in SQL using window functions.
-
 ```sql
 WITH price_history AS (
   SELECT
