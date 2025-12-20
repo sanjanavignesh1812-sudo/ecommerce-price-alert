@@ -29,8 +29,7 @@ It demonstrates:
 ## 🔄 n8n Workflow
 The workflow fetches product data, stores price history, compares prices, and triggers alerts only on genuine price drops.
 
-![n8n Workflow](images/n8nworkflow.png)
-
+![n8n Workflow](images/n8n-workflow.png)
 ---
 
 ## 📊 Price History Storage
