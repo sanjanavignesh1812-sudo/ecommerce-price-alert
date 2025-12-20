@@ -29,7 +29,7 @@ It demonstrates:
 ## 🔄 n8n Workflow
 The workflow fetches product data, stores price history, compares prices, and triggers alerts only on genuine price drops.
 
-![n8n Workflow](images/n8n workflow.png)
+![n8n Workflow](images/n8nworkflow.png)
 
 ---
 
@@ -50,7 +50,6 @@ Only the **same product’s** latest and previous prices are compared.
 ## 🧮 SQL Equivalent Logic
 The same price-drop logic can be implemented in SQL using window functions.
 
-```sql
 WITH price_history AS (
   SELECT
     id,
@@ -75,13 +74,9 @@ Fix: Append only after filtering logic.
 Cause: Google Sheets stores values as text.
 Fix: Converted price to Number in JS.
 
-### 3. Multiple items passing IF condition
-Cause: IF checked absolute price (<10) instead of price drop.
-Fix: Compared previous_price vs current_price.
-
-### 4. Wrong previous_price selected
+### 3. Wrong previous_price selected
 Cause: Rows not sorted by fetched_at.
 Fix: Sorted rows in descending order before comparison.
 
-### 5. False branch confusion
+### 4. False branch confusion
 Fix: Left false branch empty intentionally.
